@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jillion Technologies</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        body {
+            cursor: url('assets/pointer.png'), auto;
+        }
+
+        .btn-primary {
+            color: blueviolet;
+        }
+
+        .getStartedButton {
+            background-color: blueviolet;
+            color: white;
+            border-color: blueviolet;
+            transition: all 0.3s ease;
+        }
+
+        .getStartedButton:hover {
+            background-color: black;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contactButtonHero {
+            border-color: blueviolet;
+            margin-left: 10px;
+            color: blueviolet;
+            transition: all 0.3s ease;
+        }
+
+        .contactButtonHero:hover {
+            border-color: blueviolet;
+            background-color: blueviolet;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navItems {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .navItems:hover {
+            color: blueviolet;
+        }
+
+        .navItems::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: blueviolet;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .navItems:hover::after {
+            transform: scaleX(1);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-img {
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-img:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .contact img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .testimonials img {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+           img {
+                width: 100%;
+            }
+
+            .testimonials img {
+                max-width: 25%;
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="mt-5 d-flex flex-column flex-md-row col-md-12 container-fluid">
+                <h4 class="btn-primary animate__animated animate__fadeIn">Jillion Technologies</h4>
+                <nav class="nav">
+                    <a class="nav-link active btn-primary navItems animate__animated animate__fadeIn"
+                        aria-current="page" href="#hero">Home</a>
+                    <a class="nav-link btn-primary navItems animate__animated animate__fadeIn"
+                        href="#features">Features</a>
+                    <a class="nav-link btn-primary navItems animate__animated animate__fadeIn"
+                        href="#products">Products</a>
+                    <a class="nav-link btn-primary navItems animate__animated animate__fadeIn"
+                        href="#testimonials">Testimonials</a>
+                    <a class="nav-link btn-primary navItems animate__animated animate__fadeIn" href="#contact">Contact
+                        Us</a>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="heroText d-flex flex-column flex-sm-column flex-lg-row justify-content-between align-items-center mt-sm-5 mt-md-0"
+            id="hero">
+            <div>
+                <h1 style="color: blueviolet;">WE MAKE YOUR IDEAS</h1>
+                <h1 style="color: orange;">INTO REALITY</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, unde nobis veniam ipsum saepe fugiat,
+                    at excepturi velit odio distinctio maxime sequi nisi. Culpa facere eveniet accusantium eligendi aut
+                    perspiciatis incidunt officiis, sint deserunt labore voluptas! Reprehenderit minus qui dignissimos
+                    nihil harum eos obcaecati corrupti eius voluptate porro molestiae aspernatur, quas blanditiis nobis
+                    rem a.</p>
+
+                <button class="btn btn-primary getStartedButton">Get Started</button>
+                <button class="btn btn-outline-primary contactButtonHero">Contact Us</button>
+            </div>
+            <div class="ms-4">
+                <img src="assets/Screenshot 2024-11-14 185014.png" alt="girl-animated-image">
+            </div>
+        </div>
+
+
+        <div class="features align-items-center" style="margin-top: 100px;" id="features">
+            <div class="text-center">
+                <h2>Features</h2>
+            </div>
+
+            <!-- Feature - 1 -->
+            <div class="d-flex flex-column flex-sm-column flex-md-row justify-content-between" style="margin-top: 100px;">
+                <div class="me-4">
+                    <img src="assets/Screenshot 2024-11-14 192731.png" alt="animated-image">
+                </div>
+                <div class="p-5">
+                    <h4>Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, unde nobis veniam ipsum saepe
+                        fugiat, at excepturi velit odio distinctio maxime sequi nisi. Culpa facere eveniet accusantium
+                        eligendi
+                        aut perspiciatis incidunt officiis, sint deserunt labore voluptas! Reprehenderit minus qui
+                        dignissimos</p>
+                </div>
+            </div>
+
+
+            <!-- Feature - 2 -->
+            <div class="d-flex flex-column flex-sm-column flex-md-row  justify-content-between" style="margin-top: 100px;">
+                <div class="p-5">
+                    <h4>Card Title</h4>
+                    <p>The image given in the pdf was not complete, it was cropped. Due to this, I have pasted the
+                        previous picture here again. 😁</p>
+                </div>
+                <div class="me-4">
+                    <img src="assets/Screenshot 2024-11-14 192731.png" alt="animated-image">
+                </div>
+            </div>
+
+
+            <!-- Feature - 3 -->
+            <div class="d-flex flex-column flex-sm-column flex-md-row  justify-content-between" style="margin-top: 100px;">
+                <div class="me-4">
+                    <img src="assets/Screenshot 2024-11-14 193403.png" alt="animated-image">
+                </div>
+                <div class="p-5">
+                    <h4>Card Title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, unde nobis veniam ipsum saepe
+                        fugiat, at excepturi velit odio distinctio maxime sequi nisi. Culpa facere eveniet accusantium
+                        eligendi
+                        aut perspiciatis incidunt officiis, sint deserunt labore voluptas! Reprehenderit minus qui
+                        dignissimos</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="products" style="margin-top: 60px;" id="products">
+            <div class="text-center">
+                <h2>Products</h2>
+            </div>
+
+            <div class="container d-flex flex-column flex-md-row justify-content-between mt-5">
+                <div class="card mb-4" style="width: 22rem;">
+                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3>Card Title</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dolorum
+                            assumenda aspernatur doloribus, tenetur rerum tempore nihil ad omnis harum.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4" style="width: 22rem;">
+                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3>Card Title</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dolorum
+                            assumenda aspernatur doloribus, tenetur rerum tempore nihil ad omnis harum.</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4" style="width: 22rem;">
+                    <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3>Card Title</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dolorum
+                            assumenda aspernatur doloribus, tenetur rerum tempore nihil ad omnis harum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Testimonials -->
+        <div class="testimonials text-center" style="margin-top: 100px;" id="testimonials">
+            <h2 class="mb-5">Testimonials</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="https://w7.pngwing.com/pngs/4/736/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png"
+                                width="100px" class="testimonial-img border border-5 rounded-circle mb-4"
+                                alt="profile image">
+                            <div class="d-flex align-items-center justify-content-center" style="max-width: 600px;">
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+                                    modi architecto quos aspernatur? Cum eos laborum neque? Odit, error ipsum?</p>
+                            </div>
+                            <div class="mt-3"><b><i class="text-success">PAULA WILSON</i></b>, Media Analyst</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="https://w7.pngwing.com/pngs/4/736/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png"
+                                width="100px" class="testimonial-img border border-5 rounded-circle mb-4"
+                                alt="profile image">
+                            <div class="d-flex align-items-center justify-content-center" style="max-width: 600px;">
+                                <p class="mb-0">Consectetur adipisicing elit. Asperiores modi architecto quos
+                                    aspernatur? Cum eos laborum neque? Odit, error ipsum? Lorem ipsum dolor sit amet.
+                                </p>
+                            </div>
+                            <div class="mt-3"><b><i class="text-success">JOHN DOE</i></b>, Software Engineer</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <img src="https://w7.pngwing.com/pngs/4/736/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png"
+                                width="100px" class="testimonial-img border border-5 rounded-circle mb-4"
+                                alt="profile image">
+                            <div class="d-flex align-items-center justify-content-center" style="max-width: 600px;">
+                                <p class="mb-0">Asperiores modi architecto quos aspernatur? Cum eos laborum neque? Odit,
+                                    error ipsum? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            </div>
+                            <div class="mt-3"><b><i class="text-success">JANE SMITH</i></b>, UX Designer</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <img src="assets/less-than_9872164.png" width="30px" height="30px" alt="">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <img src="assets/greater-than_9211016.png" width="30px" height="30px" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- contact info -->
+        <div class="container contact" style="margin-top: 100px;" id="contact">
+            <div class="text-center">
+                <h3>Contact Us</h3>
+            </div>
+            <div class="row">
+                <div class="me-4 col">
+                    <img src="assets/Screenshot 2024-11-14 210931.png" alt="animated-image">
+                </div>
+                <div class="pt-5 col">
+                    <form>
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Piyush">
+                        <label for="email" class="form-label mt-2">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="piyushforbusiness@gmail.com">
+                        <label for="egtextArea" class="form-label mt-2">Example Text Area</label>
+                        <textarea class="form-control" placeholder="This is a demo website" id="egtextArea"
+                            rows="5"></textarea>
+                        <button class="getStartedButton mt-4 rounded py-2 px-4" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer container text-center" style="margin-top: 100px; background-color: rgb(150, 70, 255);">
+            <div class="row p-4" style="color: white;">
+                <div class="col">
+                    <h4>CONTACT US</h4>
+                    <br>
+                    <h4>Email</h4>
+                    <p>piyushforbusiness@gmail.com</p>
+                    <h4>Phone</h4>
+                    <p>1234567891</p>
+                    <h4>Address</h4>
+                    <p>C-260, Sector-63, Noida, UP-201301</p>
+                </div>
+                <div class="col">
+                    <h4>COMPANY</h4>
+                    <br>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">About Us</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Services</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Portfolio</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Development Process</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Career</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>SERVICE</h4>
+                    <br>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Website Development</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Mobile App Development</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">E-Commerce Development</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Customer Software Development</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>SUPPORT</h4>
+                    <br>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Contact</a>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none; color: white;">Terms & Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="jquery.min.js"></script>
+
+</body>
+
+</html>
