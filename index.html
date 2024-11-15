@@ -145,26 +145,42 @@
 
     <div class="container">
         <!-- Navbar -->
-        <div class="navbar">
-            <div class="mt-5 d-flex flex-column flex-md-row col-md-12 container-fluid">
-                <h4 class="btn-primary animate__animated animate__fadeIn">Jillion Technologies</h4>
-                <nav class="nav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+            <a class="navbar-brand btn-primary animate__animated animate__fadeIn" href="#" style="font-size: 1.5rem;">Jillion Technologies</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
                     <a class="nav-link active btn-primary navItems animate__animated animate__fadeIn"
-                        aria-current="page" href="#hero">Home</a>
+                    aria-current="page" href="#hero">Home</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn-primary navItems animate__animated animate__fadeIn"
-                        href="#features">Features</a>
+                    href="#features">Features</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn-primary navItems animate__animated animate__fadeIn"
-                        href="#products">Products</a>
+                    href="#products">Products</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link btn-primary navItems animate__animated animate__fadeIn"
-                        href="#testimonials">Testimonials</a>
-                    <a class="nav-link btn-primary navItems animate__animated animate__fadeIn" href="#contact">Contact
-                        Us</a>
-                </nav>
+                    href="#testimonials">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-primary navItems animate__animated animate__fadeIn"
+                    href="#contact">Contact Us</a>
+                </li>
+                </ul>
             </div>
-        </div>
+            </div>
+        </nav>
 
 
-        <div class="heroText d-flex flex-column flex-sm-column flex-lg-row justify-content-between align-items-center mt-sm-5 mt-md-0"
+        <div class="heroText d-flex flex-column flex-sm-column flex-lg-row justify-content-between align-items-center mt-5 mt-lg-0"
             id="hero">
             <div>
                 <h1 style="color: blueviolet;">WE MAKE YOUR IDEAS</h1>
@@ -191,8 +207,7 @@
             </div>
 
             <!-- Feature - 1 -->
-            <div class="d-lg-flex justify-content-between"
-                style="margin-top: 100px;">
+            <div class="d-lg-flex justify-content-between" style="margin-top: 100px;">
                 <div class="me-4">
                     <img src="assets/Screenshot 2024-11-14 192731.png" alt="animated-image">
                 </div>
@@ -208,8 +223,7 @@
 
 
             <!-- Feature - 2 -->
-            <div class="d-lg-flex justify-content-between"
-                style="margin-top: 100px;">
+            <div class="d-lg-flex justify-content-between" style="margin-top: 100px;">
                 <div class="p-5">
                     <h4>Card Title</h4>
                     <p>The image given in the pdf was not complete, it was cropped. Due to this, I have pasted the
@@ -222,8 +236,7 @@
 
 
             <!-- Feature - 3 -->
-            <div class="d-lg-flex justify-content-between"
-                style="margin-top: 100px;">
+            <div class="d-lg-flex justify-content-between" style="margin-top: 100px;">
                 <div class="me-4">
                     <img src="assets/Screenshot 2024-11-14 193403.png" alt="animated-image">
                 </div>
@@ -423,7 +436,6 @@
         crossorigin="anonymous"></script>
 
     <script src="jquery.min.js"></script>
-
 </body>
 
 </html>
